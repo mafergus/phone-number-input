@@ -10,6 +10,10 @@
   },
   "author": "Matthew Ferguson",
   "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/mafergus/phone-number-input.git"
+  },
   "dependencies": {
     "@material-ui/core": "^3.1.1",
     "google-libphonenumber": "^3.1.14",

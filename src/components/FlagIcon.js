@@ -19,7 +19,8 @@ import Flag from "./Flag";
  */
 export default function FlagIcon({ code, ...props }) {
   // eslint-disable-next-line global-require, import/no-dynamic-require
-  const src = require(`assets/flags/${code}.svg`);
+  // const src = require(`assets/flags/${code}.svg`);
+  const src = `assets/flags/${code}.svg`;
   // const src = require('./assets/US.svg');
 
   return <Flag {...props} src={src} alt={code} />;
