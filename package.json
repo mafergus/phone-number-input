@@ -1,6 +1,6 @@
 {
   "name": "phone-number-input",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Text field with country code drop-down",
   "main": "dist",
   "scripts": {
@@ -11,8 +11,8 @@
   "author": "Matthew Ferguson",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/mafergus/phone-number-input.git"
+    "type": "git",
+    "url": "https://github.com/mafergus/phone-number-input.git"
   },
   "dependencies": {
     "@material-ui/core": "^3.1.1",
