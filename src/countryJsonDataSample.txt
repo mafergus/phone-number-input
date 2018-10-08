@@ -1,0 +1,11 @@
+AD:
+alpha2: "AD"
+alpha3: "AND"
+countryCallingCodes: ["+376"]
+currencies: ["EUR"]
+emoji: "🇦🇩"
+ioc: "AND"
+languages: ["cat"]
+name: "Andorra"
+status: "assigned"
+__proto__: Object

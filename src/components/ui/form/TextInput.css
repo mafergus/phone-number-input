@@ -1,0 +1,9 @@
+.displayErrors input:invalid {
+  border-color: red;
+}
+
+.error-text {
+  visibility: hidden;
+  color: red;
+  margin: 5px 7px;
+}
