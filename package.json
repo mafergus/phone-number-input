@@ -1,7 +1,7 @@
 {
-  "name": "phone-number-input",
-  "version": "1.0.16",
-  "description": "Text field with country code drop-down",
+  "name": "gg-common",
+  "version": "0.0.1",
+  "description": "Common code for GG",
   "main": "dist",
   "scripts": {
     "start": "./node_modules/.bin/parcel src/docs/index.html",
@@ -18,7 +18,9 @@
     "@material-ui/core": "^3.1.1",
     "google-libphonenumber": "^3.1.14",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.3.1",
+    "sass-loader": "^7.1.0"
   },
   "peerDependencies": {
     "react": "^16.2.0",

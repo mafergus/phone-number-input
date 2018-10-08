@@ -22,6 +22,8 @@ module.exports = {
     alias: {
       'assets': path.resolve('./src/assets'),
       'components': path.resolve('./src/components'),
+      'static': path.resolve('./src/static'),
+      'util': path.resolve('./src/util'),
     },
   },
   module: {
@@ -37,6 +39,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.svg$/,

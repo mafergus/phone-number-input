@@ -1,0 +1,52 @@
+$primary-color-50: #C8CBCD;
+$primary-color-100: #92979C;
+$primary-color-300: #6F777E;
+$primary-color-500: #545D66;
+$primary-color-700: #3C454E;
+$primary-color-900: #212932;
+
+$secondary-color-100: #A64343;
+$secondary-color-300: #822424;
+$secondary-color-500: #5C0C0C;
+$secondary-color-700: #390000;
+$secondary-color-900: #1C0000;
+
+$quartinary-color: rgba(0, 0, 0, 0.12);
+
+$primary-text-dark: rgba(0, 0, 0, 0.87);
+$secondary-text-dark: rgba(0, 0, 0, 0.6);
+$tertiary-text-dark: rgba(0, 0, 0, 0.38);
+$divider-color: rgba(0, 0, 0, 0.08);
+
+$rating-good-color: green;
+$rating-average-color: yellow;
+$rating-poor-color: red;
+
+$button-blue: #2196F3;
+
+:export {
+  primary50: $primary-color-50;
+  primary100: $primary-color-100;
+  primary300: $primary-color-300;
+  primary500: $primary-color-500;
+  primary700: $primary-color-700;
+  primary900: $primary-color-900;
+
+  secondary100: $secondary-color-100;
+  secondary300: $secondary-color-300;
+  secondary500: $secondary-color-500;
+  secondary700: $secondary-color-700;
+  secondary900: $secondary-color-900;
+
+  textDarkPrimary: $primary-text-dark;
+  textDarkSecondary: $secondary-text-dark;
+  textDarkTertiary: $tertiary-text-dark;
+
+  ratingGoodColor: $rating-good-color;
+  ratingAverageColor: $rating-average-color;
+  ratingPoorColor: $rating-poor-color;
+
+  divider: $divider-color;
+
+  buttonBlue: $button-blue;
+}
