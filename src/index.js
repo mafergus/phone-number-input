@@ -8,7 +8,7 @@ import Phone from 'components/ui/form/Phone';
 import ConfirmPassword from './components/ui/form/ConfirmPassword';
 import Password from 'components/ui/form/Password';
 import Button from 'components/ui/Button';
-import MenuAppBar from 'components/ui/MenuAppBar';
+import AppBar from 'components/ui/AppBar';
 import Footer from 'components/ui/footer/Footer';
 import Link from 'components/ui/footer/Link';
 import PostFooter from 'components/ui/footer/PostFooter';
@@ -26,7 +26,7 @@ export {
   ConfirmPassword,
   Password,
   Button,
-  MenuAppBar,
+  AppBar,
   Footer,
   Link,
   PostFooter,

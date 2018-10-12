@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import 'static/link.css';
+import { primary } from 'util/colors';
+
 export default function Link({ children, to }) {
   return (
     <div style={{ marginTop: 5, marginBottom: 5 }}>
-      <a className="sm" style={{ fontWeight: 300 }} href={to}>{children}</a>
+      <a className="sm" href={to}>{children}</a>
     </div>
   );
 };

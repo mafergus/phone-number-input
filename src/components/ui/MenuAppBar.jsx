@@ -17,14 +17,19 @@ const STYLE = {
   },
   logo: {
     width: 31,
+    height: 35,
   },
   title: {
     flex: 1,
     fontFamily: "Good-Times",
-    textDecoration: "none"
+    textDecoration: "none",
+    marginLeft: 10,
   },
   toolbar: {
-    zIndex: 9999
+    height: 64,
+    zIndex: 9999,
+    display: "flex",
+    justifyContent: "space-between",
   },
 }
 
@@ -53,7 +58,7 @@ export default class MenuAppBar extends React.Component {
     return (
       <AppBar
         position="static"
-        style={{ ...appBarStyle }}
+        style={{ ...appBarStyle, ...style }}
       >
         <Toolbar
           style={STYLE.toolbar}

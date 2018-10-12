@@ -4,16 +4,17 @@ const STYLE = {
   button: {
     width: 250,
     height: 45,
+    cursor: "pointer",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "#2196F3",
   },
   text: {
     color: "white",
+    fontSize: "1em",
   },
 };
-
-const buttonBlue = "#2196F3";
 
 export default function Button({ style, textStyle, classname, children, variant, onClick }) {
 
@@ -27,7 +28,7 @@ export default function Button({ style, textStyle, classname, children, variant,
 
   return (
     <div style={{ ...STYLE.button, ...style }} className={getClass(variant)} onClick={onClick}>
-      <p style={{ color: variant === "ios" ? buttonBlue : "white", ...textStyle }}>{children}</p>
+      <p style={{ color: variant === "ios" ? "#2196F3" : "white", ...STYLE.text, ...textStyle }}>{children}</p>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import 'components/ui/form/TextInput.css';
+import 'static/input.css';
 
 export default function TextInput({ type, name, placeholder, style, value, onChange, error, errorText, required }) {
 
@@ -17,7 +17,7 @@ export default function TextInput({ type, name, placeholder, style, value, onCha
         value={value}
         required={required}
       />
-      <p className="error-text" style={{ visibility: error ? "visible" : "hidden" }}>{errorText}</p>
+      <p className={ error ? "error-text" : "error-text-invisible" }>{errorText}</p>
     </React.Fragment>
   );
 }

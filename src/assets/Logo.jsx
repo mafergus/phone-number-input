@@ -2,7 +2,6 @@ import React from 'react';
 
 export const Logo = props => {
   return (
-    <div style={{ fill: "orange" }}>
     <svg width="917" height="1052" viewBox="0 0 917 1052" {...props}>
       <g>
         <g transform="rotate(-25 1459.7 488.6)">
@@ -23,6 +22,5 @@ export const Logo = props => {
         </g>
       </g>
     </svg>
-    </div>
   );
 };
