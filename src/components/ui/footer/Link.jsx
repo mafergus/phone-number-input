@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import 'static/link.css';
 import { primary } from 'util/colors';
 
-export default function Link({ children, to }) {
+export default function Link({ children, to, ...otherProps }) {
   return (
     <div style={{ marginTop: 5, marginBottom: 5 }}>
-      <a className="sm" href={to}>{children}</a>
+      <a className="sm" href={to} {...otherProps}>{children}</a>
     </div>
   );
 };
