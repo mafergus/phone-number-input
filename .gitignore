@@ -62,7 +62,6 @@ typings/
 
 # production
 /build
-/dist
 
 # cache
 .cache/
