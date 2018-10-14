@@ -3,9 +3,9 @@ const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: {
-    'dist/form/index.js': './src/components/ui/form/index.js',
-    'dist/footer/index.js': './src/components/ui/footer/index.js',
-    'dist/index.js': './src/index.js',
+    'form/index.js': './src/components/ui/form/index.js',
+    'footer/index.js': './src/components/ui/footer/index.js',
+    'index.js': './src/index.js',
   },
   output: {
     path: path.resolve(__dirname, '.'),
