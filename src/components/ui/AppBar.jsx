@@ -10,10 +10,6 @@ import MenuAppBar from 'components/ui/MenuAppBar';
 
 const getStyles = browser => {
   const style = {
-    container: { 
-      position: "absolute",
-      right: 10
-    },
     logo: {
       height: browser.lessThan.small ? 20 : 35,
       marginRight: browser.lessThan.small ? 0 : 12,
@@ -24,6 +20,10 @@ const getStyles = browser => {
     },
     title: {
       fontSize: browser.lessThan.small ? "0.8em" : "1.1em",
+    },
+    buttons: {
+      position: "absolute",
+      right: 10,
     },
   };
 
@@ -60,62 +60,62 @@ export default class AppBar extends React.Component {
 
   renderLogin = style => {
     console.log("RENDER LOGIN");
-    const { authed, onLogInClick, onMenuClick, onSignUpClick, menu } = this.props;
+    const { authed, browser, onLogInClick, onMenuClick, onSignUpClick, menu } = this.props;
     const { anchorEl, logInModalOpen, signUpModalOpen } = this.state;
     const open = Boolean(anchorEl);
+    const styles = getStyles(browser);
+
+    if (authed) {
+      return (
+        <div>
+          <IconButton
+            aria-owns={open ? 'menu-appbar' : null}
+            aria-haspopup="true"
+            onClick={onMenuClick}
+            color="inherit"
+          >
+            <AccountCircle />
+          </IconButton>
+          { menu() }
+        </div>
+      );
+    }
 
     return (
-      <div style={style.container}>
-        {authed ?
-          <div>
-            <IconButton
-              aria-owns={open ? 'menu-appbar' : null}
-              aria-haspopup="true"
-              onClick={onMenuClick}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-            { menu() }
-          </div> :
-          <div>
-            <Button
-              style={{ color: "white" }}
-              variant="outlined"
-              color="secondary"
-              onClick={onLogInClick}
-            >
-              Log In
-            </Button>
-            <Button 
-              style={style.signUpButton}
-              variant="raised"
-              onClick={onSignUpClick}
-              color="secondary"
-            >
-              Sign Up
-            </Button>
-          </div>
-        }
+      <div>
+        <Button
+          style={{ color: "white" }}
+          variant="outlined"
+          color="secondary"
+          onClick={onLogInClick}
+        >
+          Log In
+        </Button>
+        <Button 
+          style={style.signUpButton}
+          variant="raised"
+          onClick={onSignUpClick}
+          color="secondary"
+        >
+          Sign Up
+        </Button>
       </div>
     );
   }
 
   render() {
     console.log("RENDER");
-    const { browser, children, transparent } = this.props;
-    const style = getStyles(browser);
+    const { browser, children, transparent, style } = this.props;
+    const styles = getStyles(browser);
 
     return (
       <MenuAppBar
-        style={style}
+        style={{ ...styles, ...style }}
         transparent={transparent}
         disableGutters={browser.lessThan.small}
       >
-        {this.renderLogin(style)}
-        <div>
-          {children}
-        </div>
+        {this.renderLogin(styles)}
+        {children}
       </MenuAppBar>
     );
   }

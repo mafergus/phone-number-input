@@ -57,7 +57,6 @@ export default class MenuAppBar extends React.Component {
 
     return (
       <AppBar
-        position="static"
         style={{ ...appBarStyle, ...style }}
       >
         <Toolbar
