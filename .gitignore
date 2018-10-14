@@ -68,3 +68,8 @@ typings/
 
 # editor
 .vscode
+
+.DS_STORE
+
+footer/
+form/

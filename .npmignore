@@ -1,1 +1,10 @@
 src
+package.json
+webpack.config.js
+CODE_OF_CONDUCT.md
+LICENSE
+README.md
+_config.yml
+_layouts
+docs
+yarn.lock
