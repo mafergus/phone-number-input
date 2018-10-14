@@ -8,3 +8,4 @@ _config.yml
 _layouts
 docs
 yarn.lock
+dist
