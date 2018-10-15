@@ -6,6 +6,7 @@ module.exports = {
     'form/index.js': './src/components/ui/form/index.js',
     'footer/index.js': './src/components/ui/footer/index.js',
     'index.js': './src/index.js',
+    'util/index.js': './src/util/index.js',
   },
   output: {
     path: path.resolve(__dirname, '.'),
