@@ -1,4 +1,5 @@
 src
+node_modules/
 webpack.config.js
 CODE_OF_CONDUCT.md
 LICENSE

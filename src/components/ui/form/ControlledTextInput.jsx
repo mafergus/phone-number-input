@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import { TextInput } from 'components/ui/form';
 
+const isValid = value => value.length !== 0;
+
 export default class ControlledTextInput extends React.Component {
 
   static propTypes = {
@@ -12,6 +14,7 @@ export default class ControlledTextInput extends React.Component {
     placeholder: PropTypes.string,
     type: PropTypes.string,
     style: PropTypes.object,
+    validate: PropTypes.func,
   };
 
   static defaultProps = {
@@ -21,6 +24,7 @@ export default class ControlledTextInput extends React.Component {
     placeholder: 'Text',
     type: 'text',
     style: {},
+    validate: isValid,
   };
 
   state = {
@@ -28,18 +32,14 @@ export default class ControlledTextInput extends React.Component {
     error: false,
   };
 
-  validate = () => {
-    const { value } = this.state;
-
-    if (value.length === 0) {
-      this.setState({ error: true });
-    } else {
-      this.setState({ error: false });
-    }
-  }
-
   onChange = event => {
-    this.setState({ value: event.target.value }, this.validate);
+    const { value } = event.target;
+    const { validate } = this.props;
+
+    this.setState({
+      value,
+      error: !validate(value),
+    });
   }
 
   val = () => {
