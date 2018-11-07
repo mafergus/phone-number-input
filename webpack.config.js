@@ -16,6 +16,7 @@ module.exports = {
   },
   externals: [nodeExternals()],
   stats: "verbose",
+  devtool: 'source-map',
   resolve: {
     // These are the reasonable defaults supported by the Node ecosystem.
     // We also include JSX as a common component filename extension to support

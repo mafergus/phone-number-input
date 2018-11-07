@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance();
 
 import { ControlledTextInput } from 'components/ui/form';
 
@@ -23,20 +22,26 @@ export default class Phone extends React.Component {
   };
 
   isValid = value => {
-    function safeFunc(func) {
-      let ret;
-      try {
-        ret = func();
-      } catch (err) {
-        ret = 'ERROR';
-      } finally {
-        return ret;
-      }
-    }
+    return true;
+    // var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    // return value.match(phoneno);
+  }
 
-    const retVal = safeFunc(() => phoneUtil.parse(value));
-    return retVal !== "ERROR" ? phoneUtil.isValidNumber(retVal) : false;
-  };
+  // isValid = value => {
+  //   function safeFunc(func) {
+  //     let ret;
+  //     try {
+  //       ret = func();
+  //     } catch (err) {
+  //       ret = 'ERROR';
+  //     } finally {
+  //       return ret;
+  //     }
+  //   }
+
+  //   const retVal = safeFunc(() => phoneUtil.parse(value));
+  //   return retVal !== "ERROR" ? phoneUtil.isValidNumber(retVal) : false;
+  // };
 
   render() {
     return (
